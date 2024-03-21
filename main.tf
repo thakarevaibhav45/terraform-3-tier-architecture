@@ -361,7 +361,7 @@ output "lb_dns_name" {
 
 
 resource "aws_s3_bucket" "my_bucket" {
-  bucket = "batch4pmdevopswithaws2082477"  
+  bucket = "vaibhavthakareremodon123"  
 
   acl    = "private"  
   versioning {
