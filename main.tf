@@ -135,10 +135,10 @@ resource "aws_route_table_association" "b" {
 
 #Create EC2 Instance
 resource "aws_instance" "webserver1" {
-  ami                    = "ami-0d5eff06f840b45e9"
+  ami                    = "ami-02d7fd1c2af6eead0"
   instance_type          = "t2.micro"
   availability_zone      = "us-east-1a"
-  key_name               = "nvj"
+  key_name               = "6pm"
   vpc_security_group_ids = [aws_security_group.webserver-sg.id]
   subnet_id              = aws_subnet.web-subnet-1.id
   user_data              = "${file("apache.sh")}"
@@ -149,10 +149,10 @@ resource "aws_instance" "webserver1" {
 }
 
 resource "aws_instance" "webserver2" {
-  ami                    = "ami-0d5eff06f840b45e9"
+  ami                    = "ami-02d7fd1c2af6eead0"
   instance_type          = "t2.micro"
   availability_zone      = "us-east-1b"
-  key_name               = "nvj"
+  key_name               = "6pm"
   vpc_security_group_ids = [aws_security_group.webserver-sg.id]
   subnet_id              = aws_subnet.web-subnet-2.id
   user_data              = "${file("apache.sh")}"
@@ -164,7 +164,7 @@ resource "aws_instance" "webserver2" {
 
 #Create EC2 Instance
 resource "aws_instance" "appserver1" {
-  ami                    = "ami-0d5eff06f840b45e9"
+  ami                    = "ami-02d7fd1c2af6eead0"
   instance_type          = "t2.micro"
   availability_zone      = "us-east-1a"
   key_name               = "6pm"
@@ -176,10 +176,10 @@ resource "aws_instance" "appserver1" {
 }
 
 resource "aws_instance" "appserver2" {
-  ami                    = "ami-0d5eff06f840b45e9"
+  ami                    = "ami-02d7fd1c2af6eead0"
   instance_type          = "t2.micro"
   availability_zone      = "us-east-1b"
-  key_name               = "nvj"
+  key_name               = "6pm"
   vpc_security_group_ids = [aws_security_group.appserver-sg.id]
   subnet_id              = aws_subnet.application-subnet-2.id
 
